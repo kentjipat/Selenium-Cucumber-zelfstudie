@@ -1,4 +1,4 @@
-package com.ken.steps;
+package glue;
 
 import base.BaseTests;
 import io.cucumber.java.After;

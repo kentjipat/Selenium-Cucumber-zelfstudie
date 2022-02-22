@@ -13,8 +13,8 @@ public class TodosPage {
         this.driver = driver;
     }
 
-    public void createTodo(String string){
-        driver.findElement(createInput).sendKeys(string + Keys.ENTER);
+    public void createTodo(String todo){
+        driver.findElement(createInput).sendKeys(todo + Keys.ENTER);
     }
 
     public String getTodoText(){

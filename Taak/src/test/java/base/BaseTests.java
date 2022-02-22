@@ -1,7 +1,6 @@
 package base;
 
 
-import io.cucumber.java.Before;
 import pages.TodosPage;
 import org.openqa.selenium.chrome.ChromeDriver;
 
