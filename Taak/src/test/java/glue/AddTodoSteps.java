@@ -22,7 +22,7 @@ public class AddTodoSteps {
 
     @Given("I am on the VanillaJS Todo page")
     public void i_am_on_the_vanilla_js_todo_page() {
-        driverHelper.getDriver().get("https://todomvc.com/examples/vanillajs/");
+
     }
     @When("I create a new todo {string}")
     public void i_create_a_todo(String todo) {

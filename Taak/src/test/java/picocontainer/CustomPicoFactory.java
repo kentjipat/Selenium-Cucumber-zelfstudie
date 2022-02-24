@@ -5,8 +5,6 @@ import io.cucumber.picocontainer.PicoFactory;
 import io.cucumber.core.backend.ObjectFactory;
 import pages.TodosPage;
 
-import java.lang.annotation.Annotation;
-
 public class CustomPicoFactory implements ObjectFactory {
     private final PicoFactory delegate = new PicoFactory();
 
