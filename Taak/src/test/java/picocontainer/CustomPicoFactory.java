@@ -1,9 +1,9 @@
 package picocontainer;
 
-import helpers.DriverHelper;
+import actions.UIDriverActions;
+import actions.UITodoActions;
 import io.cucumber.picocontainer.PicoFactory;
 import io.cucumber.core.backend.ObjectFactory;
-import pages.TodosPage;
 
 public class CustomPicoFactory implements ObjectFactory {
     private final PicoFactory delegate = new PicoFactory();
@@ -13,8 +13,8 @@ public class CustomPicoFactory implements ObjectFactory {
     }
 
     private void handleCommon(){
-        addClass(TodosPage.class);
-        addClass(DriverHelper.class);
+        addClass(UITodoActions.class);
+        addClass(UIDriverActions.class);
     }
 
     @Override

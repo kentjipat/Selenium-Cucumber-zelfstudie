@@ -13,7 +13,7 @@ public class DriverHelper {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
-        this.driver = ThreadGuard.protect(new ChromeDriver(options));
+        this.driver = new ChromeDriver(options);
     }
 
     public WebDriver getDriver() {

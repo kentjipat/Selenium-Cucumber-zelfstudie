@@ -16,7 +16,6 @@ public class Hooks {
     @Before
     public void setup(){
         System.out.println("Starting test");
-        driverHelper.getDriver().get("https://todomvc.com/examples/vanillajs/");
     }
 
     @After
