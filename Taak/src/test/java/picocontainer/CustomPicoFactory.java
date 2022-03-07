@@ -1,5 +1,6 @@
 package picocontainer;
 
+import actions.UIBolActions;
 import actions.UIDriverActions;
 import actions.UITodoActions;
 import io.cucumber.picocontainer.PicoFactory;
@@ -15,6 +16,7 @@ public class CustomPicoFactory implements ObjectFactory {
     private void handleCommon(){
         addClass(UITodoActions.class);
         addClass(UIDriverActions.class);
+        addClass((UIBolActions.class));
     }
 
     @Override

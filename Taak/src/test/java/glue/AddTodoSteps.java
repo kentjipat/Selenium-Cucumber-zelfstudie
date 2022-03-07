@@ -40,4 +40,5 @@ public class AddTodoSteps {
     public void todoIsNoLongerVisibleOnThePage(String todo) {
         todoActions.validateDeletedTodo(todo);
     }
+
 }

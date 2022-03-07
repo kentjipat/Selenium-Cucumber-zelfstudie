@@ -13,7 +13,7 @@ Feature: Add a todo
     |"new todo 1"|
     |"new todo 2"|
 
-    @localtest
+
   Scenario Outline: Todo deleted
     Given I am on the VanillaJS Todo page
     When I create a new todo <todo>

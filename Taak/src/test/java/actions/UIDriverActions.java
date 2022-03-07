@@ -20,6 +20,6 @@ public class UIDriverActions implements DriverActions {
 
     @Override
     public void getBolPage() {
-        driver.get("https://bol.com/");
+        driver.get("https://www.bol.com/be/nl/l/nieuwe-games-voor-de-nintendo-switch/38906/7289/?rating=all");
     }
 }
