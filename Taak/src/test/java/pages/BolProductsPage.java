@@ -3,7 +3,6 @@ package pages;
 import components.Game;
 import helpers.DriverHelper;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -51,6 +50,11 @@ public class BolProductsPage {
 
     public void filterProducts(){
         filterBtn.click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public List<Game> filterByStudio(String studio){
@@ -59,12 +63,11 @@ public class BolProductsPage {
                 .collect(Collectors.toList());
     }
 
-    public List<Game> getVisibleGames(){
-        List<Game> displayedGames = new ArrayList<>();
+    public List<String> getVisibleGames(){
+        List<String> displayedGames = new ArrayList<>();
         for (WebElement displayedGameElement : visibleGames) {
-                String title = displayedGameElement.findElement(By.cssSelector(".product-title")).getText();
-                String studio = displayedGameElement.findElement(By.cssSelector(".product-creator li a")).getText();
-                displayedGames.add(new Game(title, studio));
+                String title = displayedGameElement.findElement(By.cssSelector(".product-title")).getText().trim();
+                displayedGames.add(title);
         }
         return displayedGames;
 

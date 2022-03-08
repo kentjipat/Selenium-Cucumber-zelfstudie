@@ -41,6 +41,6 @@ public class UIBolActions implements BolActions{
 
     @Override
     public void validateDisplayedGame(Game game) {
-        assertTrue("Game is not displayed", bolProductsPage.getVisibleGames().contains(game));
+        assertTrue("Game is not displayed", bolProductsPage.getVisibleGames().contains(game.getTitle()));
     }
 }
